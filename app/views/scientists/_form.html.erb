@@ -1,0 +1,16 @@
+
+<% if flash[:errors] %>
+    <% flash[:errors].each do |error| %>
+        <p style="color: red;"><%= error %></p>
+    <% end %>
+<% end %>
+
+<%= form_for(@scientist) do |f| %>
+    <%= f.label "Name:" %>
+    <%= f.text_field :name %>
+
+    <%= f.label "Field of Study:" %>
+    <%= f.text_field :field_of_study %>
+
+    <%= f.submit "Create" %>
+<% end %>

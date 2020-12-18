@@ -1,0 +1,10 @@
+<h3><%= @scientist.name %></h3>
+
+<p>Field of Study: <%= @scientist.field_of_study %></p>
+<p>Missions: 
+    <ul>
+        <% @scientist.missions.each do |mission| %>
+            <li><p>Planet: <%= mission.name %> || Mission: <%= mission.planet.name %></p></li>
+        <% end %>
+    </ul>
+</p>
